@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a2e">
+
+    <!-- ヘッダー -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#12122a"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎼"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="楽曲エディタ"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="セクションを並べて1曲を構成する"
+                android:textColor="#555577"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!-- 曲名 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="曲名："
+            android:textColor="#aaaacc"
+            android:textSize="12sp"
+            android:layout_marginEnd="4dp" />
+
+        <EditText
+            android:id="@+id/edit_song_title"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:hint="新しい楽曲"
+            android:textColor="#ffffff"
+            android:textColorHint="#555577"
+            android:background="#252545"
+            android:padding="8dp"
+            android:textSize="13sp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- キー -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="キー："
+            android:textColor="#aaaacc"
+            android:textSize="12sp"
+            android:layout_marginEnd="4dp" />
+
+        <Spinner
+            android:id="@+id/key_spinner"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:background="#252545"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+
+    <!-- ツールバー -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#1e1e3e"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <Button
+            android:id="@+id/btn_add_section"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="＋ セクション追加"
+            android:textSize="12sp"
+            android:backgroundTint="#7048e8"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="全クリア"
+            android:textSize="12sp"
+            android:backgroundTint="#c83c3c" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_save_song"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="💾 保存"
+            android:textSize="12sp"
+            android:backgroundTint="#3c7048"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_text_export"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="📋 コピー"
+            android:textSize="12sp"
+            android:backgroundTint="#3c6070"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="閉じる"
+            android:textSize="12sp"
+            android:backgroundTint="#444466" />
+
+    </LinearLayout>
+
+    <!-- メインコンテンツ（左右分割） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- 左：セクション編集 -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/section_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <!-- 区切り線 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333355" />
+
+        <!-- 右：テキストプレビュー -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:background="#12122a">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="#1e1e3e">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="テキストプレビュー"
+                    android:textColor="#aaaacc"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/preview_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#cccccc"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingMultiplier="1.4" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ステータスバー -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#12122a"
+        android:text="セクションをタップして編集 | 矢印ボタンで並び替え"
+        android:textColor="#555577"
+        android:textSize="10sp"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#252545"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- 上段：セクション名 + 並び替え -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:background="#7048e8"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/text_section_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#aaaacc"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_up"
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:text="▲"
+                android:textSize="10sp"
+                android:backgroundTint="#333355"
+                android:padding="0dp"
+                android:layout_marginEnd="3dp" />
+
+            <Button
+                android:id="@+id/btn_down"
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:text="▼"
+                android:textSize="10sp"
+                android:backgroundTint="#333355"
+                android:padding="0dp" />
+
+        </LinearLayout>
+
+        <!-- コード表示 -->
+        <TextView
+            android:id="@+id/text_section_chords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#8888ff"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp" />
+
+        <!-- 下段：ボタン -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_edit_chords"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="コード編集"
+                android:textSize="11sp"
+                android:backgroundTint="#4a6fa5"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_edit_lyrics"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="歌詞編集"
+                android:textSize="11sp"
+                android:backgroundTint="#3c8c8c"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_delete_section"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="削除"
+                android:textSize="11sp"
+                android:backgroundTint="#c83c3c" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

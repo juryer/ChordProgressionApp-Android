@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#1a1a2e">
+
+    <!-- 左側：タイトル・ボタン -->
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#12122a"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="＋ コード進行登録"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存する"
+            android:backgroundTint="#7048e8"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="キャンセル"
+            android:backgroundTint="#dc8c3c" />
+
+    </LinearLayout>
+
+    <!-- 右側：フォーム -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- タイトル -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="タイトル *"
+                android:textColor="#aaaacc"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="例: 王道ポップ進行"
+                android:textColor="#ffffff"
+                android:textColorHint="#555577"
+                android:background="#252545"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- コード選択エリア -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="コード *"
+                android:textColor="#aaaacc"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#252545"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <!-- チップ表示 -->
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chord_chip_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="40dp"
+                        android:gravity="center_vertical"
+                        android:padding="4dp" />
+
+                </HorizontalScrollView>
+
+                <!-- 編集ボタン -->
+                <Button
+                    android:id="@+id/chord_edit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:text="選択する"
+                    android:textSize="11sp"
+                    android:backgroundTint="#7048e8"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- BPM -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BPM"
+                android:textColor="#aaaacc"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_tempo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="120"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:textColorHint="#555577"
+                android:background="#252545"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- レーティング -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="レーティング"
+                android:textColor="#aaaacc"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- メモ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="メモ"
+                android:textColor="#aaaacc"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="任意のメモ"
+                android:textColor="#ffffff"
+                android:textColorHint="#555577"
+                android:background="#252545"
+                android:padding="10dp"
+                android:minLines="3"
+                android:gravity="top" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
