@@ -50,10 +50,18 @@ PC版と同様のコンセプトで、スマートフォンでも使えるライ
 
 ## セットアップ
 
-1. このリポジトリをクローンまたはダウンロード
-2. Android Studioで「既存のプロジェクトを開く」でインポート
-3. `build.gradle` に Gson が含まれていることを確認
-4. エミュレーターまたは実機で実行
+このリポジトリにはソースコードのみ含まれています。  
+Android Studioで新規プロジェクトを作成し、以下の手順でコードを組み込んでください。
+
+1. Android Studioで新規プロジェクトを作成（Empty Views Activity・Java・API 24）
+2. `app/src/main/java/com/chordapp/` にJavaファイルをコピー
+3. `app/src/main/res/layout/` にXMLファイルをコピー
+4. `AndroidManifest.xml` の内容を反映
+5. `build.gradle` の `dependencies` に以下を追加
+   ```gradle
+   implementation 'com.google.code.gson:gson:2.13.2'
+   ```
+6. Sync Now → エミュレーターまたは実機で実行
 
 ---
 
