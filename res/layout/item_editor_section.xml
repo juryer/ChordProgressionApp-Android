@@ -80,7 +80,7 @@
             <Button
                 android:id="@+id/btn_edit_chords"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="35dp"
                 android:text="コード編集"
                 android:textSize="11sp"
                 android:backgroundTint="#4a6fa5"
@@ -89,7 +89,7 @@
             <Button
                 android:id="@+id/btn_edit_lyrics"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="35dp"
                 android:text="歌詞編集"
                 android:textSize="11sp"
                 android:backgroundTint="#3c8c8c"
@@ -98,7 +98,7 @@
             <Button
                 android:id="@+id/btn_delete_section"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="35dp"
                 android:text="削除"
                 android:textSize="11sp"
                 android:backgroundTint="#c83c3c" />
