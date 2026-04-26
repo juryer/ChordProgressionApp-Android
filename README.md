@@ -101,9 +101,9 @@ https://juryer.github.io/my-web-page/
 ---
 ## スクリーンショット
 
-<img src="https://github.com/user-attachments/assets/09138a2e-756f-4625-90da-a4497d55bd55" width="20%">
+<img src="https://github.com/user-attachments/assets/09138a2e-756f-4625-90da-a4497d55bd55" width="50%">
 <br>
-<img src="https://github.com/user-attachments/assets/d5b587b9-2d96-4010-b59f-acc8e00a8d55" width="20%">
+<img src="https://github.com/user-attachments/assets/d5b587b9-2d96-4010-b59f-acc8e00a8d55" width="50%">
 
 
 
